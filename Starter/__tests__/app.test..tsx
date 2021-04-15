@@ -14,9 +14,9 @@ describe('App', () => {
 	const appInstance = appComponent.instance();
 
 	// shallow Child1 component
-	const child1Component = component.find(Child1).shallow();
+	const child1Component = appComponent.find(Child1).shallow();
 	// get Child1 component instance
-	const child1Component = component.find(Child1).shallow();
+	const child1Instance = child1Component.instance();
 	
 	it('generic check', () => {
 		expect(child1Component.length).toBe(1);
@@ -58,7 +58,7 @@ describe('App', () => {
 
 	it('set and check prop change', () => {
 		appComponent.setProps({ prop1: 2 });
-		const props = instance.props;
+		const props = appInstance.props;
 		expect(props).toEqual({ prop1: 2 });
 	});
 });
