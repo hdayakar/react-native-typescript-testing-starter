@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import App from '../components/App';
+import App from '../components/app';
 import Child1 from '../components/child1';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
