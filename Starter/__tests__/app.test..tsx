@@ -15,15 +15,13 @@ describe('App', () => {
 
 	// shallow Child1 component
 	const child1Component = appComponent.find(Child1).shallow();
-	// get Child1 component instance
-	const child1Instance = child1Component.instance();
 	
 	it('generic check', () => {
 		expect(child1Component.length).toBe(1);
 	});
 
 	it('child component state', () => {
-		expect(child1Component.state('state1')).toEqual(100);
+		expect(child1Component.state('childState1')).toEqual(100);
 	});
 
 	it('generic check', () => {
